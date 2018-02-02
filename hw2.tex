@@ -27,7 +27,20 @@
   
   {\bfseries Solution.}
   
-  Answer \\
+  False. There are many groups where this is not true. \\
+  
+  Consider the Klein four-group: \\
+  \begin{tabular}{l | l l c r}
+	* & e & a & b & c \\
+	\hline
+	e & e & a & b & c \\
+	a & a & e & c & b \\
+	b & b & c & e & a \\
+	c & c & b & a & e \\
+  \end{tabular}
+  
+  In the Klein four-group, for any $y \in G$, $y^2 = e$. Thus, this is not true. \qed \\
+
  
 %%% Problem p39 B.6
 \item {\bfseries p39 B.6.} Prove the following is true in every group $G$, or give a counterexample. \\
@@ -35,14 +48,14 @@
   
   {\bfseries Solution.}
   
-  Let $x, y \in G$. We know $y = xz$ \\
+  Let $x, y \in G$. Assume $y = xz$ \\
   $x^{-1}y = x^{-1}xz$ \\
   $x^{-1}y = ez$ \\
   $x^{-1}y = z$
   
   Because $x \in G$, we know $x^{-1} \in G$. Since the group $G$ is closed under the group operation, we know $x^{-1}y \in G$.
   
-  Thus $z \in G$, since $x^{-1}y \in G$ and $x^{-1}y = z$. \qed \\
+  Thus we know there exists $z \in G$, where $z = x^{-1}y$, such that $y = xz$. \qed \\
 
 %%% Problem p40 C.7
 \item {\bfseries p40 C.7.} Assuming that $a$ and $b$ commute, prove the following: \\
@@ -79,11 +92,10 @@
   
   {\bfseries Solution.}
   
-  $H$ {\bfseries is/is not} a subgroup of $G$. \\
+  $H$ {\bfseries is} a subgroup of $G$, because given $x \in H \rightarrow x^{-1} \in H$ and given $x,y \in H \rightarrow xy \in H$. \\
 
 %%% Problem p49 B.4
-\item {\bfseries p49 B.4.}
-  Solve in terms of $a$, $b$, and $c$:
+\item {\bfseries p49 B.4.} Show that $H$ is a subgroup of $G$:
   
   $G = \langle \mathscr{C}(\mathbb{R}),+\rangle, H = \{f \in \mathscr{C}(\mathbb{R}) : \int_{0}^{1} f(x) dx = 0\}$
   
