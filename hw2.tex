@@ -50,14 +50,25 @@
   
   {\bfseries Solution.}
   
-  Given that $a$ and $b$ commute: \\
-  $aba^{-1}b^{-1} = baa^{-1}b^{-1}$ \\
-  $baa^{-1}b^{-1} = beb^{-1}$ \\
-  $beb^{-1} = bb^{-1}$ \\
-  $bb^{-1} = e$ \\
-  Thus, $aba^{-1}b^{-1} = e$
+  \begin{itemize}
   
-  If this property did not hold true, then $a$ and $b$ must not commute. \\
+	  \item Assume $ab = ba$, show $aba^{-1}b^{-1} = e$: \\
+	  $(ab)a^{-1} = (ba)^{-1}$ \\
+	  $aba^{-1} = be = b$ \\
+	  $(aba^{-1})b^{-1} = bb^{-1}$ \\
+	  $aba^{-1}b^{-1} = e$ \qed \\
+	  
+	  
+	  \item Assume $aba^{-1}b^{-1} = e$, show $ab = ba$ \\
+	  $(aba^{-1}b^{-1})b = eb$ \\
+	  $aba^{-1}e = eb$ \\
+	  $aba^{-1} = b$ \\
+	  $aba^{-1}a = ba$ \\
+	  $abe = ab = ba$ \qed \\
+	  
+	  \item Thus, $ab = ba$ iff $aba^{-1}b^{-1} = e$ \qed
+  
+  \end{itemize}
   
 \newpage
  
