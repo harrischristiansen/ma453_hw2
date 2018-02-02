@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\input{headers2}
+
+\usepackage{fancyhdr}   
+\pagestyle{fancy}      
+\lhead{MA453 Spring 2018 - Homework 2}               
+\rhead{Harris Christiansen (christih@purdue.edu)}
+
+\usepackage{mathrsfs}
+\usepackage[strict]{changepage}  
+\newcommand{\nextoddpage}{\checkoddpage\ifoddpage{\ \newpage\ \newpage}\else{\ \newpage}\fi}
+
+\begin{document}
+
+\title{Homework 2}
+\date{p39 B.5 and B.6, p40 C.7, p48 A.1, p49 B.4, p50 D.1 and D.3}
+\maketitle
+
+\thispagestyle{fancy}  
+\pagestyle{fancy}      
+
+\begin{enumerate}
+
+%%% Problem p39 B.5
+\item {\bfseries p39 B.5.} Prove the following is true in every group $G$, or give a counterexample. \\
+  For every $x \in G$, there is some $y \in G$ such that $x = y^2$. (This is the same as saying that every element of G has a "square root.")
+  
+  {\bfseries Solution.}
+  
+  Answer \\
+ 
+%%% Problem p39 B.6
+\item {\bfseries p39 B.6.} Prove the following is true in every group $G$, or give a counterexample. \\
+  For any two elements $x$ and $y$ in $G$, there is an element $z$ in $G$ such that $y = xz$
+  
+  {\bfseries Solution.}
+  
+  Let $x, y \in G$. We know $y = xz$ \\
+  $x^{-1}y = x^{-1}xz$ \\
+  $x^{-1}y = ez$ \\
+  $x^{-1}y = z$
+  
+  Because $x \in G$, we know $x^{-1} \in G$. Since the group $G$ is closed under the group operation, we know $x^{-1}y \in G$.
+  
+  Thus $z \in G$, since $x^{-1}y \in G$ and $x^{-1}y = z$. \qed \\
+
+%%% Problem p40 C.7
+\item {\bfseries p40 C.7.} Assuming that $a$ and $b$ commute, prove the following: \\
+  $ab = ba$ iff $aba^{-1}b^{-1} = e$
+  
+  {\bfseries Solution.}
+  
+  Given that $a$ and $b$ commute: \\
+  $aba^{-1}b^{-1} = baa^{-1}b^{-1}$ \\
+  $baa^{-1}b^{-1} = beb^{-1}$ \\
+  $beb^{-1} = bb^{-1}$ \\
+  $bb^{-1} = e$ \\
+  Thus, $aba^{-1}b^{-1} = e$
+  
+  If this property did not hold true, then $a$ and $b$ must not commute. \\
+  
+\newpage
+ 
+%%% Problem p48 A.1
+\item {\bfseries p48 A.1.} Determine whether or not $H$ is a subgroup of $G$:
+  
+  $G = \langle \mathbb{R},+\rangle, H = \{\log a : a \in \mathbb{Q}, a>0\}$
+  
+  {\bfseries Solution.}
+  
+  $H$ {\bfseries is/is not} a subgroup of $G$. \\
+
+%%% Problem p49 B.4
+\item {\bfseries p49 B.4.}
+  Solve in terms of $a$, $b$, and $c$:
+  
+  $G = \langle \mathscr{C}(\mathbb{R}),+\rangle, H = \{f \in \mathscr{C}(\mathbb{R}) : \int_{0}^{1} f(x) dx = 0\}$
+  
+  {\bfseries Solution.}
+  
+  Answer \\
+ 
+\newpage
+ 
+%%% Problem p50 D.1
+\item {\bfseries p50 D.1.} Let $G$ be a group
+  
+  If $H$ and $K$ are subgroups of a group $G$, prove that $H \cap K$ is a subgroup of $G$. (Remember that $x \in H \cap K$ iff $x \in H$ and $x \in K$.)
+  
+  {\bfseries Solution.} To prove $H \cap K$ is a subgroup of G, we mush show: \\
+  if $f \in S$ then $f^{-1} \in S$ \\
+  if $f,g \in S$ then $fg \in S$ \\
+  
+  Let $H, K$ be subgroups of $G$. \\
+  We know by definition that for every $x \in H \cap K$, $x \in H$ and $x \in K$ \\
+  Since $H$ and $K$ are subgroups, we also know $x^{-1} \in H$ and $x^{-1} \in K$, thus $x^{-1} \in H \cap K$ \qed \\
+  
+  For $x,y \in H \cap K$, we know $x,y \in H$ and $x,y \in K$ \\
+  Since $H$ and $K$ are subgroups, they are closed under their operation. Thus $xy \in H$ and $xy \in K$ \\
+  Thus $xy \in H \cap K$. \qed \\
+  
+  Since we have shown $x^{-1} \in H \cap K$ and $xy \in H \cap K$, we can conclude that $H \cap K$ is a subgroup of $G$. \qed \\
+
+%%% Problem p50 D.3
+\item {\bfseries p50 D.3.} Let $G$ be a group
+  
+  By the \textit{center} of a group $G$ we mean the set of all elements of $G$ which commute with every element of $G$, that is,
+  
+  $C = \{ a \in G : ax = xa$ for every $x \in G\}$
+  
+  Prove that $C$ is a subgroup of $G$.
+  
+  {\bfseries Solution.}
+  
+  \begin{itemize}
+	  \item Given $f \in C$, show $f^{-1} \in C$: \\
+	  Given $f \in C, a \in G$, by definition of \textit{center}, $af = fa \forall f \in G$ \\
+	  $f^{-1}af = f^{-1}fa$ \\
+	  $f^{-1}af = ea = a$ \\
+	  $f^{-1}aff^{-1} = af^{-1}$ \\
+	  $f^{-1}ae = f^{-1}a = af^{-1}$ \\
+	  Thus, by definition of $C$, $f^{-1} \in C$ \qed \\
+	  
+	  \item Given $f,g \in C, a \in G$ show $fg \in C$: \\
+	  We know $f(ga) = (ga)f$ since $ga \in G$ and $f \in C$ \\
+	  $f(ga) = g(af)$, by associativity \\
+	  $f(ga) = (af)g$, since $g \in C$ and $af \in G$ \\
+	  $f(ga) = afg$, thus by definition of $C$, $fg \in C$ \qed \\
+	  
+	  \item Since we have shown $f^{-1} \in C$ and $fg \in C$, we can conclude that $C$ is a subgroup of $G$. \qed
+  
+  \end{itemize}
+
+
+\end{enumerate}
+
+\end{document}
