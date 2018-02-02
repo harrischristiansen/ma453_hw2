@@ -66,7 +66,7 @@
   \begin{itemize}
   
 	  \item Assume $ab = ba$, show $aba^{-1}b^{-1} = e$: \\
-	  $(ab)a^{-1} = (ba)^{-1}$ \\
+	  $(ab)a^{-1} = (ba)a^{-1}$ \\
 	  $aba^{-1} = be = b$ \\
 	  $(aba^{-1})b^{-1} = bb^{-1}$ \\
 	  $aba^{-1}b^{-1} = e$ \qed \\
@@ -101,7 +101,23 @@
   
   {\bfseries Solution.}
   
-  Answer \\
+  \begin{itemize}
+  
+	  \item Given $x \in H$, show $x^{-1} \in H$: \\
+	  $x \in \mathscr{C}(\mathbb{R})$
+	  $\int_{0}^{1} f(x) dx = 0$ \\
+	  Since the $x^{-1}$ still satisfies an integral of 0, we know $x^{-1} \in H$. \qed \\
+	  
+	  \item Given $x,y \in H$ show $xy \in H$: \\
+	  $x,y \in \mathscr{C}(\mathbb{R})$ \\
+	  $\int_{0}^{1} f(x) dx = 0$ \\
+	  $\int_{0}^{1} f(y) dy = 0$ \\
+	  $\int_{0}^{1} f(x) dx + \int_{0}^{1} f(y) dy = 0$ \\
+	  Thus, since adding the two integrals still produces 0, the result is also in H. $xy \in H$ \qed \\
+	  
+	  \item Since we have shown $x^{-1} \in H$ and $xy \in H$, we can conclude that $H$ is a subgroup of $G$. \qed
+  
+  \end{itemize}
  
 \newpage
  
@@ -110,7 +126,7 @@
   
   If $H$ and $K$ are subgroups of a group $G$, prove that $H \cap K$ is a subgroup of $G$. (Remember that $x \in H \cap K$ iff $x \in H$ and $x \in K$.)
   
-  {\bfseries Solution.} To prove $H \cap K$ is a subgroup of G, we mush show: \\
+  {\bfseries Solution.} To prove $H \cap K$ is a subgroup of G, we must show: \\
   if $f \in S$ then $f^{-1} \in S$ \\
   if $f,g \in S$ then $fg \in S$ \\
   
@@ -136,8 +152,9 @@
   {\bfseries Solution.}
   
   \begin{itemize}
+  
 	  \item Given $f \in C$, show $f^{-1} \in C$: \\
-	  Given $f \in C, a \in G$, by definition of \textit{center}, $af = fa \forall f \in G$ \\
+	  Given $f \in C, a \in G$, by definition of \textit{center}, $af = fa \; \forall \; f \in G$ \\
 	  $f^{-1}af = f^{-1}fa$ \\
 	  $f^{-1}af = ea = a$ \\
 	  $f^{-1}aff^{-1} = af^{-1}$ \\
